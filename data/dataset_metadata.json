@@ -1,0 +1,20 @@
+{
+  "app_name": "MindDoc: Your Companion",
+  "app_id": "de.moodpath.android",
+  "dataset_size_raw": 3000,
+  "collection_method": "Collected from Google Play using the google-play-scraper Python package",
+  "collection_date": "2026-03-23T14:05:21.105329",
+  "cleaning_decisions": [
+    "Removed duplicate reviews",
+    "Removed empty reviews",
+    "Removed extremely short reviews",
+    "Removed punctuation",
+    "Removed special characters and emojis",
+    "Converted numbers to text",
+    "Removed extra whitespace",
+    "Converted all text to lowercase",
+    "Removed stop words",
+    "Lemmatized words"
+  ],
+  "notes": "3000 raw reviews were successfully collected from Google Play. After preprocessing and cleaning (removal of duplicates, empty entries, and low-quality reviews), the final cleaned dataset contains 2585 reviews."
+}
