@@ -1,16 +1,215 @@
-
 {
   "tests": [
     {
-      "test_id": "T_auto_1",
-      "requirement_id": "FR1",
-      "scenario": "Workout Logging Stability",
+      "test_id": "T1",
+      "requirement_id": "RM1",
+      "scenario": "Mood check-in entry is saved successfully",
       "steps": [
-        "Open the workout logging screen",
-        "Enter workout details",
-        "Submit the workout"
+        "Open the app",
+        "Start a mood check-in",
+        "Enter valid responses",
+        "Submit the check-in"
       ],
-      "expected_result": "The workout is saved successfully and the application remains stable."
+      "expected_result": "The mood entry is saved successfully."
+    },
+    {
+      "test_id": "T2",
+      "requirement_id": "RM1",
+      "scenario": "Mood entry is not saved when check-in is abandoned",
+      "steps": [
+        "Open the app",
+        "Start a mood check-in",
+        "Exit before submitting"
+      ],
+      "expected_result": "No mood entry is saved."
+    },
+    {
+      "test_id": "T3",
+      "requirement_id": "RM2",
+      "scenario": "Previously saved entries are shown in mood history",
+      "steps": [
+        "Open the app",
+        "Navigate to mood history"
+      ],
+      "expected_result": "Previously saved mood entries are displayed."
+    },
+    {
+      "test_id": "T4",
+      "requirement_id": "RM2",
+      "scenario": "Mood history entries are displayed in chronological order",
+      "steps": [
+        "Open the app",
+        "Navigate to mood history",
+        "Observe the order of saved entries"
+      ],
+      "expected_result": "Mood history entries are displayed in chronological order."
+    },
+    {
+      "test_id": "T5",
+      "requirement_id": "RM3",
+      "scenario": "Reflective question appears after check-in",
+      "steps": [
+        "Open the app",
+        "Complete a mood check-in"
+      ],
+      "expected_result": "At least one reflective question is displayed."
+    },
+    {
+      "test_id": "T6",
+      "requirement_id": "RM3",
+      "scenario": "Reflective question does not appear without completed check-in",
+      "steps": [
+        "Open the app",
+        "Start but do not complete a mood check-in"
+      ],
+      "expected_result": "No reflective question is displayed."
+    },
+    {
+      "test_id": "T7",
+      "requirement_id": "RM4",
+      "scenario": "User submits response to reflective question",
+      "steps": [
+        "Open the app",
+        "Complete a check-in",
+        "Answer the reflective question",
+        "Submit the response"
+      ],
+      "expected_result": "The response is stored successfully."
+    },
+    {
+      "test_id": "T8",
+      "requirement_id": "RM4",
+      "scenario": "Blank reflective response is rejected or not stored",
+      "steps": [
+        "Open the app",
+        "Complete a check-in",
+        "Leave the reflective response blank",
+        "Attempt to submit"
+      ],
+      "expected_result": "The blank response is not stored successfully."
+    },
+    {
+      "test_id": "T9",
+      "requirement_id": "RM5",
+      "scenario": "Support-oriented content is shown after relevant interaction",
+      "steps": [
+        "Open the app",
+        "Complete a relevant emotional support interaction"
+      ],
+      "expected_result": "At least one support-oriented content item is displayed."
+    },
+    {
+      "test_id": "T10",
+      "requirement_id": "RM5",
+      "scenario": "Support content opens within the app",
+      "steps": [
+        "Open the app",
+        "Access a support-oriented content item"
+      ],
+      "expected_result": "The support-oriented content opens within the app."
+    },
+    {
+      "test_id": "T11",
+      "requirement_id": "RM6",
+      "scenario": "Educational mental health content is displayed",
+      "steps": [
+        "Open the app",
+        "Navigate to educational or informational content"
+      ],
+      "expected_result": "Educational or informational content is displayed within the app."
+    },
+    {
+      "test_id": "T12",
+      "requirement_id": "RM6",
+      "scenario": "Educational content is readable inside the app",
+      "steps": [
+        "Open the app",
+        "Open an educational content item"
+      ],
+      "expected_result": "The content is readable within an in-app screen."
+    },
+    {
+      "test_id": "T13",
+      "requirement_id": "RM7",
+      "scenario": "Insight-based feedback is generated from user data",
+      "steps": [
+        "Open the app",
+        "Ensure enough mood data exists",
+        "Trigger insight generation or open insights"
+      ],
+      "expected_result": "At least one insight or summary feedback item is displayed."
+    },
+    {
+      "test_id": "T14",
+      "requirement_id": "RM7",
+      "scenario": "No insights are shown when sufficient data does not exist",
+      "steps": [
+        "Open the app",
+        "Use an account with insufficient mood data",
+        "Open insights"
+      ],
+      "expected_result": "No insight or summary feedback item is displayed."
+    },
+    {
+      "test_id": "T15",
+      "requirement_id": "RM8",
+      "scenario": "Premium content is clearly labeled",
+      "steps": [
+        "Open the app",
+        "Navigate to a page containing both free and premium content"
+      ],
+      "expected_result": "Premium content is visibly labeled before selection."
+    },
+    {
+      "test_id": "T16",
+      "requirement_id": "RM8",
+      "scenario": "Free content is distinguishable from premium content",
+      "steps": [
+        "Open the app",
+        "Navigate to a page containing both free and premium content",
+        "Compare the content labels"
+      ],
+      "expected_result": "Free content is distinguishable from premium content."
+    },
+    {
+      "test_id": "T17",
+      "requirement_id": "RM9",
+      "scenario": "Subscription information is accessible in the app",
+      "steps": [
+        "Open the app",
+        "Navigate to subscription-related information"
+      ],
+      "expected_result": "Subscription-related information is displayed within the app."
+    },
+    {
+      "test_id": "T18",
+      "requirement_id": "RM9",
+      "scenario": "Subscription information is shown before confirmation",
+      "steps": [
+        "Open the app",
+        "Navigate to a subscription confirmation flow"
+      ],
+      "expected_result": "Subscription-related information is displayed before confirmation."
+    },
+    {
+      "test_id": "T19",
+      "requirement_id": "RM10",
+      "scenario": "Privacy-related information is shown before sensitive data use",
+      "steps": [
+        "Open the app",
+        "Access a feature involving sensitive personal or mental health data"
+      ],
+      "expected_result": "Privacy-related information is displayed before continuing."
+    },
+    {
+      "test_id": "T20",
+      "requirement_id": "RM10",
+      "scenario": "Privacy information can be reviewed within the app",
+      "steps": [
+        "Open the app",
+        "Navigate to privacy or data-handling information"
+      ],
+      "expected_result": "Privacy-related information is readable within the app."
     }
   ]
 }

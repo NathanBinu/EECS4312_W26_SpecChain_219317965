@@ -1,12 +1,105 @@
 {
   "groups": [
     {
-      "group_id": "G1",
-      "theme": "App crashes during activity logging, THIS IS A AN EXAMPLE, PLEASE REMOVE ",
-      "review_ids": ["rev_12", "rev_33", "rev_45", "rev_89"],
+      "group_id": "RGM-01",
+      "theme": "Mood tracking and self-reflection",
+      "review_ids": [
+        "minddoc_5",
+        "minddoc_6",
+        "minddoc_31",
+        "minddoc_33",
+        "minddoc_47",
+        "minddoc_64",
+        "minddoc_65",
+        "minddoc_69",
+        "minddoc_72",
+        "minddoc_96"
+      ],
       "example_reviews": [
-        "The app crashes every time I log my run.",
-        "Logging workouts causes the app to freeze."
+        "The app helps track my mood and reflect on patterns over time.",
+        "Daily check-ins and journaling make me more aware of my emotions."
+      ]
+    },
+    {
+      "group_id": "RGM-02",
+      "theme": "Mental health support and stress management",
+      "review_ids": [
+        "minddoc_9",
+        "minddoc_73",
+        "minddoc_205",
+        "minddoc_294",
+        "minddoc_311",
+        "minddoc_379",
+        "minddoc_689",
+        "minddoc_768",
+        "minddoc_822",
+        "minddoc_1406"
+      ],
+      "example_reviews": [
+        "The app helps me deal with stress and anxiety.",
+        "It supports me during difficult emotional situations."
+      ]
+    },
+    {
+      "group_id": "RGM-03",
+      "theme": "Informational content and insights",
+      "review_ids": [
+        "minddoc_7",
+        "minddoc_12",
+        "minddoc_15",
+        "minddoc_69",
+        "minddoc_173",
+        "minddoc_262",
+        "minddoc_281",
+        "minddoc_359",
+        "minddoc_605",
+        "minddoc_641"
+      ],
+      "example_reviews": [
+        "The app provides useful insights and helpful information.",
+        "Educational content helps me understand my mental health better."
+      ]
+    },
+    {
+      "group_id": "RGM-04",
+      "theme": "Pricing and paid feature limitations",
+      "review_ids": [
+        "minddoc_21",
+        "minddoc_67",
+        "minddoc_78",
+        "minddoc_254",
+        "minddoc_275",
+        "minddoc_309",
+        "minddoc_336",
+        "minddoc_350",
+        "minddoc_470",
+        "minddoc_690"
+      ],
+      "example_reviews": [
+        "Too many features are locked behind a paywall.",
+        "The free version is limited compared to the paid version."
+      ]
+    },
+    {
+      "group_id": "RGM-05",
+      "theme": "Privacy, trust, and data concerns",
+      "review_ids": [
+        "minddoc_32",
+        "minddoc_55",
+        "minddoc_2818",
+        "minddoc_2819",
+        "minddoc_2823",
+        "minddoc_30",
+        "minddoc_99",
+        "minddoc_101",
+        "minddoc_127",
+        "minddoc_143"
+      ],
+      "example_reviews": [
+        "The app shares personal data with third parties.",
+        "I am concerned about privacy and how my data is handled."
       ]
     }
-  ]}
+  ]
+}
+

@@ -1,22 +1,156 @@
-{  "personas": [
+{
+  "personas": [
     {
-      "id": "P1",
-      "name": "Frequent Activity Tracker",
-      "description": "A user who relies on the app to log workouts frequently and expects stable performance.",
-      "derived_from_group": "G1",
+      "id": "PM-01",
+      "name": "Reflective Mood Tracker",
+      "description": "A user who relies on regular mood check-ins, journaling, and pattern recognition to better understand emotional wellbeing over time.",
+      "derived_from_group": "RGM-01",
       "goals": [
-        "Track workouts consistently",
-        "Log activity quickly"      ],
+        "Track moods consistently",
+        "Recognize emotional patterns over time",
+        "Use journaling and check-ins for self-reflection"
+      ],
       "pain_points": [
-        "App crashes during logging",
-        "Workout data sometimes disappears"      ],
+        "Difficulty identifying emotional triggers",
+        "Needs a structured way to log feelings",
+        "Wants meaningful reflection from tracked mood data"
+      ],
       "context": [
-        "Logging activities immediately after workouts",
-        "Using the app during outdoor exercise"      ],
+        "Uses the app multiple times a day for mood check-ins",
+        "May review past entries to understand recurring emotions",
+        "Values self-awareness and emotional pattern tracking"
+      ],
       "constraints": [
-        "Logging must be reliable",
-        "Data should not be lost"       ],
+        "Mood entries should be easy to record regularly",
+        "Past mood data should remain accessible",
+        "The app should support repeated daily check-ins"
+      ],
       "evidence_reviews": [
-        "rev_12",
-        "rev_45"      ]
-    }  ] }
+        "minddoc_5",
+        "minddoc_6"
+      ]
+    },
+    {
+      "id": "PM-02",
+      "name": "Stress and Emotional Support Seeker",
+      "description": "A user who turns to the app for help managing stress, emotional struggles, anxiety, or low mood.",
+      "derived_from_group": "RGM-02",
+      "goals": [
+        "Reduce stress and emotional overwhelm",
+        "Receive support during difficult periods",
+        "Use the app to better cope with anxiety or low mood"
+      ],
+      "pain_points": [
+        "Feels overwhelmed during stressful periods",
+        "Needs support that is practical and calming",
+        "May struggle with long or demanding interactions when stressed"
+      ],
+      "context": [
+        "Uses the app during emotionally difficult moments",
+        "May rely on the app as part of daily mental health support",
+        "Needs help that feels manageable during stress"
+      ],
+      "constraints": [
+        "Support features should be accessible during stressful moments",
+        "The app should not overwhelm the user with excessive input demands",
+        "The app should help users express emotional struggles clearly"
+      ],
+      "evidence_reviews": [
+        "minddoc_9",
+        "minddoc_379"
+      ]
+    },
+    {
+      "id": "PM-03",
+      "name": "Insight and Information-Oriented User",
+      "description": "A user who values accurate mental health information, educational content, and app-generated insights.",
+      "derived_from_group": "RGM-03",
+      "goals": [
+        "Learn more about mental health through the app",
+        "Receive useful insights and explanations",
+        "Use app information to support self-understanding"
+      ],
+      "pain_points": [
+        "Becomes frustrated when content lacks depth or usefulness",
+        "Needs information that feels trustworthy and relevant",
+        "May stop engaging if insights feel repetitive or vague"
+      ],
+      "context": [
+        "Uses the app for both tracking and learning",
+        "May compare app information to personal experience or professional advice",
+        "Values educational and informative app content"
+      ],
+      "constraints": [
+        "Information should be accessible within the app",
+        "Insights should be understandable and clearly presented",
+        "Educational content should feel relevant to the user’s needs"
+      ],
+      "evidence_reviews": [
+        "minddoc_7",
+        "minddoc_15"
+      ]
+    },
+    {
+      "id": "PM-04",
+      "name": "Cost-Conscious Free User",
+      "description": "A user who is interested in the app’s mental health features but is frustrated by paywalls, subscriptions, or limited free access.",
+      "derived_from_group": "RGM-04",
+      "goals": [
+        "Access useful features without needing to pay immediately",
+        "Understand the value of premium content",
+        "Use the free version effectively before committing to payment"
+      ],
+      "pain_points": [
+        "Too many features feel locked behind payment",
+        "Free version may feel too limited",
+        "Unclear whether premium content is worth the cost"
+      ],
+      "context": [
+        "Explores the free version first",
+        "May consider premium if value is clear",
+        "Is sensitive to subscription pricing and feature restrictions"
+      ],
+      "constraints": [
+        "Users should be able to distinguish free and paid content",
+        "Core free functionality should still feel useful",
+        "Premium restrictions should be communicated clearly"
+      ],
+      "evidence_reviews": [
+        "minddoc_21",
+        "minddoc_78"
+      ]
+    },
+    {
+      "id": "PM-05",
+      "name": "Privacy and Trust Sensitive User",
+      "description": "A user who is highly concerned about personal data handling, privacy, and whether sensitive mental health information is shared appropriately.",
+      "derived_from_group": "RGM-05",
+      "goals": [
+        "Use the app without fear of inappropriate data sharing",
+        "Trust the app with sensitive mental health information",
+        "Understand how personal information is handled"
+      ],
+      "pain_points": [
+        "Concerned about data being shared with third parties",
+        "May uninstall the app if privacy terms feel unsafe",
+        "Needs transparency around sensitive data handling"
+      ],
+      "context": [
+        "Uses the app for sensitive mental health tracking",
+        "May review privacy terms before continued use",
+        "Trust is critical to long-term engagement"
+      ],
+      "constraints": [
+        "Privacy information should be visible and understandable",
+        "Sensitive data handling should be transparent",
+        "Users should be able to assess trust before continuing use"
+      ],
+      "evidence_reviews": [
+        "minddoc_2818",
+        "minddoc_2823"
+      ]
+    }
+  ]
+}
+
+  
