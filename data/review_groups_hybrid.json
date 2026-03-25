@@ -1,13 +1,109 @@
-{  "groups": [
+{
+  "groups": [
     {
-      "group_id": "H1",
-      "theme": "Workout logging failures during activity tracking",
-      "review_ids": ["rev_12", "rev_33", "rev_41", "rev_92"],
-      "example_reviews": [
-        "The app crashes whenever I try to log a run.",
-        "Logging workouts causes the app to freeze."
+      "group_id": "G1",
+      "theme": "Mood tracking and self-reflection",
+      "review_ids": [
+        "minddoc_1814",
+        "minddoc_1817",
+        "minddoc_1872",
+        "minddoc_1873",
+        "minddoc_394",
+        "minddoc_403",
+        "minddoc_438",
+        "minddoc_1278",
+        "minddoc_1297",
+        "minddoc_1307"
       ],
-      "notes": "Removed one unrelated review about login problems from the original automated group."
+      "example_reviews": [
+        "The app helps users map mood, emotions, and daily patterns over time.",
+        "Users value mood tracking when the questions feel manageable and insightful."
+      ],
+      "notes": "Kept the automated theme, but narrowed the group to reviews clearly focused on mood tracking, reflection, and emotional pattern recognition."
+    },
+    {
+      "group_id": "G2",
+      "theme": "Mental health support and stress management",
+      "review_ids": [
+        "minddoc_379",
+        "minddoc_689",
+        "minddoc_822",
+        "minddoc_1406",
+        "minddoc_9",
+        "minddoc_205",
+        "minddoc_294",
+        "minddoc_311",
+        "minddoc_768",
+        "minddoc_939"
+      ],
+      "example_reviews": [
+        "Users rely on the app for help dealing with stress, anxiety, and difficult periods.",
+        "The app is valued when it supports emotional coping without overwhelming the user."
+      ],
+      "notes": "Kept the automated group and retained only reviews clearly centered on stress, emotional support, or coping."
+    },
+    {
+      "group_id": "G3",
+      "theme": "Informational content and insights",
+      "review_ids": [
+        "minddoc_108",
+        "minddoc_228",
+        "minddoc_538",
+        "minddoc_540",
+        "minddoc_553",
+        "minddoc_1",
+        "minddoc_133",
+        "minddoc_266",
+        "minddoc_368",
+        "minddoc_634"
+      ],
+      "example_reviews": [
+        "Users appreciate informative content, insight, and mental health explanations in the app.",
+        "The app is useful when insights and educational material feel relevant and understandable."
+      ],
+      "notes": "Revised the automated group by removing reviews that were mainly about paywalls and keeping reviews focused on informative content and insight."
+    },
+    {
+      "group_id": "G4",
+      "theme": "Pricing and paid feature limitations",
+      "review_ids": [
+        "minddoc_29",
+        "minddoc_30",
+        "minddoc_54",
+        "minddoc_78",
+        "minddoc_55",
+        "minddoc_138",
+        "minddoc_21",
+        "minddoc_236",
+        "minddoc_445",
+        "minddoc_796"
+      ],
+      "example_reviews": [
+        "Users are frustrated when important functionality is hidden behind a paywall.",
+        "The app loses value for some users when free access feels too limited or subscription handling feels unfair."
+      ],
+      "notes": "Merged clearly paywall related reviews into this group, including some that were previously misclassified under insights."
+    },
+    {
+      "group_id": "G5",
+      "theme": "Privacy, trust, and data concerns",
+      "review_ids": [
+        "minddoc_2818",
+        "minddoc_2819",
+        "minddoc_2823",
+        "minddoc_904",
+        "minddoc_911",
+        "minddoc_915",
+        "minddoc_917",
+        "minddoc_2027",
+        "minddoc_2763",
+        "minddoc_910"
+      ],
+      "example_reviews": [
+        "Users are concerned about sensitive mental health data being shared with third parties.",
+        "Trust depends on clear privacy handling and confidence in how user data is collected or used."
+      ],
+      "notes": "Refined the automated privacy group by keeping reviews centered on privacy, data handling, and user trust, and excluding reviews that were mainly about subscription or reliability problems."
     }
   ]
 }

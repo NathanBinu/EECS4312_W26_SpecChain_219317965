@@ -1,12 +1,143 @@
 {
   "groups": [
     {
-      "group_id": "A1",
-      "theme": "Workout logging issues",
-      "review_ids": ["rev_12", "rev_33", "rev_41", "rev_92"],
+      "group_id": "G1",
+      "theme": "Mood tracking and self-reflection",
+      "review_ids": [
+        "minddoc_1814",
+        "minddoc_1817",
+        "minddoc_1872",
+        "minddoc_1873",
+        "minddoc_394",
+        "minddoc_403",
+        "minddoc_438",
+        "minddoc_1278",
+        "minddoc_1297",
+        "minddoc_1307",
+        "minddoc_2469",
+        "minddoc_2471",
+        "minddoc_2479",
+        "minddoc_2483",
+        "minddoc_2491",
+        "minddoc_2582",
+        "minddoc_2584",
+        "minddoc_2593",
+        "minddoc_2605",
+        "minddoc_2671"
+      ],
       "example_reviews": [
-        "The app crashes whenever I try to log a run.",
-        "Logging workouts causes the app to freeze."
+        "think concept app brilliant think insightful good way map mood emotion daily activity without diary keen see result fourteen day keep good work guy",
+        "great mood tracker question arent overbearing excessive"
+      ]
+    },
+    {
+      "group_id": "G2",
+      "theme": "Mental health support and stress management",
+      "review_ids": [
+        "minddoc_379",
+        "minddoc_689",
+        "minddoc_822",
+        "minddoc_1406",
+        "minddoc_9",
+        "minddoc_205",
+        "minddoc_294",
+        "minddoc_311",
+        "minddoc_768",
+        "minddoc_939"
+      ],
+      "example_reviews": [
+        "app helped deal lot anxiety stress helpful reflect life",
+        "amazing app helping me deal with stress of life"
+      ]
+    },
+    {
+      "group_id": "G3",
+      "theme": "Informational content and insights",
+      "review_ids": [
+        "minddoc_29",
+        "minddoc_30",
+        "minddoc_34",
+        "minddoc_54",
+        "minddoc_78",
+        "minddoc_108",
+        "minddoc_228",
+        "minddoc_538",
+        "minddoc_540",
+        "minddoc_553",
+        "minddoc_1",
+        "minddoc_133",
+        "minddoc_266",
+        "minddoc_336",
+        "minddoc_368",
+        "minddoc_94",
+        "minddoc_146",
+        "minddoc_150",
+        "minddoc_322",
+        "minddoc_634"
+      ],
+      "example_reviews": [
+        "good information and helpful insight about mental health",
+        "informative content helps me understand patterns and symptoms better"
+      ]
+    },
+    {
+      "group_id": "G4",
+      "theme": "Pricing and paid feature limitations",
+      "review_ids": [
+        "minddoc_55",
+        "minddoc_138",
+        "minddoc_269",
+        "minddoc_397",
+        "minddoc_445",
+        "minddoc_638",
+        "minddoc_647",
+        "minddoc_732",
+        "minddoc_745",
+        "minddoc_869",
+        "minddoc_21",
+        "minddoc_62",
+        "minddoc_204",
+        "minddoc_236",
+        "minddoc_256",
+        "minddoc_166",
+        "minddoc_195",
+        "minddoc_225",
+        "minddoc_260",
+        "minddoc_796"
+      ],
+      "example_reviews": [
+        "free trial ask way much personal information tell pay deceiving",
+        "cannot unsubscribe keep charging"
+      ]
+    },
+    {
+      "group_id": "G5",
+      "theme": "Privacy, trust, and data concerns",
+      "review_ids": [
+        "minddoc_694",
+        "minddoc_904",
+        "minddoc_911",
+        "minddoc_915",
+        "minddoc_917",
+        "minddoc_2027",
+        "minddoc_2763",
+        "minddoc_2818",
+        "minddoc_2819",
+        "minddoc_2823",
+        "minddoc_277",
+        "minddoc_309",
+        "minddoc_413",
+        "minddoc_457",
+        "minddoc_910",
+        "minddoc_2240",
+        "minddoc_2316",
+        "minddoc_2337",
+        "minddoc_775",
+        "minddoc_821"
+      ],
+      "example_reviews": [
+        "read privacy agreement and found data shared for advertising purposes",
+        "sensitive mental health data should not be exposed to third parties"
       ]
     }
   ]

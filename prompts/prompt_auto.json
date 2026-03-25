@@ -1,3 +1,5 @@
 {
-    "prompt": ""
+  "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+  "task_4_1_grouping_prompt": "You are a software requirements engineering assistant. You are given cleaned Google Play app reviews for a mental health app. Group the reviews into 5 meaningful thematic groups. The groups must be similar but not identical to manual grouping. Each group must represent a common theme, include several related review IDs, and include two short example review summaries. Use only the reviews provided. Return valid JSON only in this exact format: {\"groups\": [{\"group_id\": \"G1\", \"theme\": \"...\", \"review_ids\": [\"minddoc_1\", \"minddoc_2\"], \"example_reviews\": [\"...\", \"...\"]}]}",
+  "task_4_2_persona_prompt": "You are a software requirements engineering assistant. Based on the grouped review themes, generate one persona per group. Each persona must reference the review group it was derived from and follow the personas_manual.json style. Return valid JSON only in this exact format: {\"personas\": [{\"id\": \"PA1\", \"name\": \"...\", \"description\": \"...\", \"derived_from_group\": \"G1\", \"goals\": [\"...\"], \"pain_points\": [\"...\"], \"context\": [\"...\"], \"constraints\": [\"...\"], \"evidence_reviews\": [\"minddoc_1\", \"minddoc_2\"]}]}"
 }

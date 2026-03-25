@@ -1,0 +1,141 @@
+{
+  "personas": [
+    {
+      "id": "PA1",
+      "name": "Mindful Emma",
+      "description": "A self-aware individual seeking to understand and manage her emotions through mood tracking and self-reflection.",
+      "derived_from_group": "G1",
+      "goals": [
+        "Track and understand my emotions",
+        "Reflect on my daily activities and feelings",
+        "Identify patterns and areas for improvement"
+      ],
+      "pain_points": [
+        "Difficulty finding a user-friendly and insightful mood tracking app",
+        "Struggling to maintain a consistent tracking habit"
+      ],
+      "context": [
+        "Daily life",
+        "Personal growth",
+        "Mental wellness"
+      ],
+      "constraints": [
+        "Limited time for tracking and reflection",
+        "Seeking a simple and intuitive app"
+      ],
+      "evidence_reviews": [
+        "minddoc_1814",
+        "minddoc_1817"
+      ]
+    },
+    {
+      "id": "PA2",
+      "name": "Stressed Alex",
+      "description": "An individual dealing with stress and seeking mental health support and stress management tools.",
+      "derived_from_group": "G2",
+      "goals": [
+        "Manage stress and anxiety",
+        "Find effective coping mechanisms",
+        "Improve overall mental well-being"
+      ],
+      "pain_points": [
+        "Lack of accessible and effective mental health resources",
+        "Difficulty finding time for self-care"
+      ],
+      "context": [
+        "Workplace stress",
+        "Personal relationships",
+        "Daily life"
+      ],
+      "constraints": [
+        "Limited access to mental health professionals",
+        "Seeking convenient and affordable support"
+      ],
+      "evidence_reviews": [
+        "minddoc_379",
+        "minddoc_689"
+      ]
+    },
+    {
+      "id": "PA3",
+      "name": "Curious Ryan",
+      "description": "An individual interested in learning more about mental health and wellness through informational content and insights.",
+      "derived_from_group": "G3",
+      "goals": [
+        "Learn about mental health and wellness",
+        "Stay informed about new developments and research"
+      ],
+      "pain_points": [
+        "Difficulty finding reliable and engaging mental health content",
+        "Limited time for reading and learning"
+      ],
+      "context": [
+        "Personal growth",
+        "Professional development",
+        "Staying informed"
+      ],
+      "constraints": [
+        "Seeking concise and accessible content",
+        "Limited budget for paid resources"
+      ],
+      "evidence_reviews": [
+        "minddoc_29",
+        "minddoc_30"
+      ]
+    },
+    {
+      "id": "PA4",
+      "name": "Frugal Sarah",
+      "description": "An individual concerned about the cost and limitations of paid features in mental health apps.",
+      "derived_from_group": "G4",
+      "goals": [
+        "Find affordable mental health resources",
+        "Access useful features without breaking the bank"
+      ],
+      "pain_points": [
+        "Frustrated with paid feature limitations",
+        "Difficulty finding free or low-cost alternatives"
+      ],
+      "context": [
+        "Personal finance",
+        "Mental health",
+        "Technology"
+      ],
+      "constraints": [
+        "Limited budget for mental health resources",
+        "Seeking value for money"
+      ],
+      "evidence_reviews": [
+        "minddoc_55",
+        "minddoc_138"
+      ]
+    },
+    {
+      "id": "PA5",
+      "name": "Private Paige",
+      "description": "An individual concerned about data privacy and trust in mental health apps.",
+      "derived_from_group": "G5",
+      "goals": [
+        "Protect personal data",
+        "Trust mental health apps with sensitive information"
+      ],
+      "pain_points": [
+        "Concerns about data breaches and misuse",
+        "Difficulty finding transparent and secure apps"
+      ],
+      "context": [
+        "Personal data",
+        "Online security",
+        "Mental health"
+      ],
+      "constraints": [
+        "Seeking transparent data practices",
+        "Limited technical expertise"
+      ],
+      "evidence_reviews": [
+        "minddoc_694",
+        "minddoc_904"
+      ]
+    }
+  ]
+}

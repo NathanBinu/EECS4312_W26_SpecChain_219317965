@@ -1,31 +1,144 @@
 {
   "personas": [
     {
-      "id": "P_hybrid_1",
-      "name": "Frequent Fitness Logger",
-      "description": "A user who depends on the app for regular workout tracking and expects logging to work reliably during or immediately after exercise.",
-      "derived_from_group": "H1",
+      "id": "PH1",
+      "name": "Reflective Mood Tracker",
+      "description": "A user who wants to understand emotions through repeated mood check-ins, reflection, and recognition of emotional patterns over time.",
+      "derived_from_group": "G1",
       "goals": [
-        "Log workouts quickly",
-        "Track activities without interruption"
+        "Track moods consistently",
+        "Reflect on emotional experiences",
+        "Identify patterns in daily wellbeing"
       ],
       "pain_points": [
-        "The app crashes while saving workouts",
-        "Previously entered activity data may disappear"
+        "Mood tracking tools can feel repetitive or shallow",
+        "The user needs questions that support reflection without being burdensome"
       ],
       "context": [
-        "Using the app during exercise sessions",
-        "Using the app outdoors or while moving"
+        "Daily emotional check-ins",
+        "Self-reflection",
+        "Personal mental wellness tracking"
       ],
       "constraints": [
-        "Workout logging must complete without crashing",
-        "Saved workout data must persist"
+        "Needs a manageable check-in flow",
+        "Needs saved history to remain accessible"
       ],
       "evidence_reviews": [
-        "rev_12",
-        "rev_41"
+        "minddoc_1814",
+        "minddoc_1817"
+      ]
+    },
+    {
+      "id": "PH2",
+      "name": "Stress Support Seeker",
+      "description": "A user who turns to the app during stressful or emotionally difficult periods and wants support that is useful and manageable.",
+      "derived_from_group": "G2",
+      "goals": [
+        "Manage stress or anxiety",
+        "Receive support during difficult moments",
+        "Use the app as part of mental health coping"
       ],
-      "notes": "Refined the persona description and removed an unsupported assumption about synchronization."
+      "pain_points": [
+        "Stressful periods make it harder to engage with demanding app interactions",
+        "Support feels less useful when the app is inconsistent or overwhelming"
+      ],
+      "context": [
+        "Stressful daily life situations",
+        "Emotional difficulty",
+        "Ongoing coping support"
+      ],
+      "constraints": [
+        "Needs accessible support tools",
+        "Needs emotional support features that do not create extra burden"
+      ],
+      "evidence_reviews": [
+        "minddoc_379",
+        "minddoc_822"
+      ]
+    },
+    {
+      "id": "PH3",
+      "name": "Insight Oriented Learner",
+      "description": "A user who values informative content, explanations, and insight that help make sense of mental health patterns or symptoms.",
+      "derived_from_group": "G3",
+      "goals": [
+        "Learn more about mental health",
+        "Receive useful insight from app data",
+        "Read relevant educational content within the app"
+      ],
+      "pain_points": [
+        "Some insight can feel too vague or not meaningful enough",
+        "Content loses value when it is not clearly useful or understandable"
+      ],
+      "context": [
+        "Mental health self-education",
+        "Looking for in-app explanations",
+        "Using app insight to improve self-understanding"
+      ],
+      "constraints": [
+        "Needs understandable and relevant content",
+        "Needs insight that feels grounded in tracked data"
+      ],
+      "evidence_reviews": [
+        "minddoc_108",
+        "minddoc_538"
+      ]
+    },
+    {
+      "id": "PH4",
+      "name": "Cost Conscious Evaluator",
+      "description": "A user who is interested in the app but becomes frustrated when useful functionality is restricted by pricing, subscriptions, or unclear premium boundaries.",
+      "derived_from_group": "G4",
+      "goals": [
+        "Understand what is free and what is paid",
+        "Use the free version effectively",
+        "Judge whether paid access is worth the cost"
+      ],
+      "pain_points": [
+        "Paywalls reduce perceived usefulness",
+        "Subscription handling and premium access can feel unfair or misleading"
+      ],
+      "context": [
+        "Budget sensitive app use",
+        "Evaluating premium access",
+        "Comparing free versus paid value"
+      ],
+      "constraints": [
+        "Needs visible distinction between free and paid features",
+        "Needs access information before payment decisions"
+      ],
+      "evidence_reviews": [
+        "minddoc_29",
+        "minddoc_55"
+      ]
+    },
+    {
+      "id": "PH5",
+      "name": "Privacy Sensitive User",
+      "description": "A user who is highly concerned about trust, privacy, and the handling of sensitive mental health data within the app.",
+      "derived_from_group": "G5",
+      "goals": [
+        "Protect personal mental health data",
+        "Understand how data is handled",
+        "Trust the app before continuing to use sensitive features"
+      ],
+      "pain_points": [
+        "Unclear privacy practices reduce trust",
+        "Third party data sharing concerns can make the app unusable"
+      ],
+      "context": [
+        "Sensitive personal data usage",
+        "Reviewing privacy implications",
+        "Trust based app adoption"
+      ],
+      "constraints": [
+        "Needs privacy information before sensitive actions",
+        "Needs confidence that data handling is transparent"
+      ],
+      "evidence_reviews": [
+        "minddoc_2818",
+        "minddoc_2823"
+      ]
     }
   ]
 }

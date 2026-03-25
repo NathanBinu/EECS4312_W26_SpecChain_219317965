@@ -1,15 +1,222 @@
 {
   "tests": [
     {
-      "test_id": "T_auto_1",
-      "requirement_id": "FR_auto_1",
-      "scenario": "Logging a workout without crashing",
+      "test_id": "TA1",
+      "requirement_id": "RA1",
+      "scenario": "User records a mood entry successfully",
       "steps": [
-        "Open the workout logging screen",
-        "Enter workout details",
-        "Submit the workout"
+        "Open the app",
+        "Navigate to the mood tracking section",
+        "Select a current emotion",
+        "Save the entry"
       ],
-      "expected_result": "The workout is saved successfully and the application remains stable."
+      "expected_result": "The system saves the mood entry successfully."
+    },
+    {
+      "test_id": "TA2",
+      "requirement_id": "RA1",
+      "scenario": "Mood entry is not saved if the user leaves before saving",
+      "steps": [
+        "Open the app",
+        "Navigate to the mood tracking section",
+        "Select a current emotion",
+        "Exit without saving"
+      ],
+      "expected_result": "No mood entry is saved."
+    },
+    {
+      "test_id": "TA3",
+      "requirement_id": "RA2",
+      "scenario": "Reflective prompt is shown after mood tracking",
+      "steps": [
+        "Open the app",
+        "Complete a mood tracking entry",
+        "Open the reflection area"
+      ],
+      "expected_result": "The system displays at least one reflective prompt."
+    },
+    {
+      "test_id": "TA4",
+      "requirement_id": "RA2",
+      "scenario": "No reflective prompt is shown without a completed entry",
+      "steps": [
+        "Open the app",
+        "Do not complete a mood tracking entry",
+        "Open the reflection area"
+      ],
+      "expected_result": "No reflective prompt related to a completed mood entry is displayed."
+    },
+    {
+      "test_id": "TA5",
+      "requirement_id": "RA3",
+      "scenario": "User indicates stress and accesses support content",
+      "steps": [
+        "Open the app",
+        "Indicate stress or anxiety",
+        "Access support-related functionality"
+      ],
+      "expected_result": "The system displays at least one relevant coping resource."
+    },
+    {
+      "test_id": "TA6",
+      "requirement_id": "RA3",
+      "scenario": "Support content opens within the app",
+      "steps": [
+        "Open the app",
+        "Indicate stress or anxiety",
+        "Open one support resource"
+      ],
+      "expected_result": "The support-oriented content opens within the app."
+    },
+    {
+      "test_id": "TA7",
+      "requirement_id": "RA4",
+      "scenario": "User navigates to informational content area",
+      "steps": [
+        "Open the app",
+        "Navigate to the informational content area"
+      ],
+      "expected_result": "The system displays readable mental health information."
+    },
+    {
+      "test_id": "TA8",
+      "requirement_id": "RA4",
+      "scenario": "Informational content is readable within the app",
+      "steps": [
+        "Open the app",
+        "Open one informational content item"
+      ],
+      "expected_result": "The informational content is readable within the app interface."
+    },
+    {
+      "test_id": "TA9",
+      "requirement_id": "RA5",
+      "scenario": "User searches for informational resources",
+      "steps": [
+        "Open the app",
+        "Navigate to informational resources",
+        "Enter a search term"
+      ],
+      "expected_result": "The system displays relevant matching resources."
+    },
+    {
+      "test_id": "TA10",
+      "requirement_id": "RA5",
+      "scenario": "User filters informational resources",
+      "steps": [
+        "Open the app",
+        "Navigate to informational resources",
+        "Select a filter option"
+      ],
+      "expected_result": "The system displays relevant matching resources."
+    },
+    {
+      "test_id": "TA11",
+      "requirement_id": "RA6",
+      "scenario": "User views pricing and access information",
+      "steps": [
+        "Open the app",
+        "Navigate to pricing or access information",
+        "Compare available options"
+      ],
+      "expected_result": "The system displays the differences between free and paid access."
+    },
+    {
+      "test_id": "TA12",
+      "requirement_id": "RA6",
+      "scenario": "Feature limitations are shown before payment",
+      "steps": [
+        "Open the app",
+        "Navigate to pricing or access information",
+        "View free and paid options"
+      ],
+      "expected_result": "The system shows the features and limitations of free and paid access before payment."
+    },
+    {
+      "test_id": "TA13",
+      "requirement_id": "RA7",
+      "scenario": "User accesses feature with sensitive personal data",
+      "steps": [
+        "Open the app",
+        "Access a feature involving sensitive personal data"
+      ],
+      "expected_result": "The system displays privacy-related information before the user continues."
+    },
+    {
+      "test_id": "TA14",
+      "requirement_id": "RA7",
+      "scenario": "Privacy information appears before continuing sensitive feature use",
+      "steps": [
+        "Open the app",
+        "Open a feature involving sensitive personal data",
+        "Observe the initial screen"
+      ],
+      "expected_result": "Privacy-related information is presented before further action."
+    },
+    {
+      "test_id": "TA15",
+      "requirement_id": "RA8",
+      "scenario": "User views data policy section",
+      "steps": [
+        "Open the app",
+        "Open the privacy or data policy section"
+      ],
+      "expected_result": "The system shows understandable information about data handling practices."
+    },
+    {
+      "test_id": "TA16",
+      "requirement_id": "RA8",
+      "scenario": "Data policy information is readable within the app",
+      "steps": [
+        "Open the app",
+        "Navigate to the privacy or data policy section",
+        "Read the displayed policy text"
+      ],
+      "expected_result": "The data handling information is readable within the app."
+    },
+    {
+      "test_id": "TA17",
+      "requirement_id": "RA9",
+      "scenario": "User views mood tracking history",
+      "steps": [
+        "Open the app",
+        "Use an account with previous mood entries",
+        "Open mood history"
+      ],
+      "expected_result": "The system displays the saved entries."
+    },
+    {
+      "test_id": "TA18",
+      "requirement_id": "RA9",
+      "scenario": "Mood history is empty when no saved entries exist",
+      "steps": [
+        "Open the app",
+        "Use an account with no previous mood entries",
+        "Open mood history"
+      ],
+      "expected_result": "No saved entries are displayed."
+    },
+    {
+      "test_id": "TA19",
+      "requirement_id": "RA10",
+      "scenario": "User receives reminder to complete mood tracking",
+      "steps": [
+        "Open the app",
+        "Enable reminder preferences",
+        "Wait until a scheduled reminder time occurs"
+      ],
+      "expected_result": "The system sends a notification prompting the user to log mood information."
+    },
+    {
+      "test_id": "TA20",
+      "requirement_id": "RA10",
+      "scenario": "No reminder is sent when reminders are disabled",
+      "steps": [
+        "Open the app",
+        "Disable reminder preferences",
+        "Wait until a scheduled reminder time occurs"
+      ],
+      "expected_result": "No reminder notification is sent."
     }
   ]
 }

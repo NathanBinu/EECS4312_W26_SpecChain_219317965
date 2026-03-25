@@ -2,15 +2,235 @@
   "tests": [
     {
       "test_id": "T_hybrid_1",
-      "requirement_id": "FR_hybrid_1",
-      "scenario": "Save a workout entry without crashing",
+      "requirement_id": "RH1",
+      "scenario": "Save a mood entry successfully",
       "steps": [
-        "Open the workout logging feature",
-        "Enter workout information",
-        "Submit the workout"
+        "Open the app",
+        "Start a mood check-in",
+        "Enter mood information",
+        "Submit the check-in"
       ],
-      "expected_result": "The workout is saved successfully and the application does not crash.",
-      "notes": "Revised the expected result to match the updated hybrid requirement."
+      "expected_result": "The mood entry is saved successfully.",
+      "notes": "Aligned with refined hybrid requirement RH1 for mood tracking."
+    },
+    {
+      "test_id": "T_hybrid_2",
+      "requirement_id": "RH1",
+      "scenario": "Mood entry is not saved when check-in is abandoned",
+      "steps": [
+        "Open the app",
+        "Start a mood check-in",
+        "Exit before submitting"
+      ],
+      "expected_result": "No mood entry is saved.",
+      "notes": "Negative case for RH1."
+    },
+    {
+      "test_id": "T_hybrid_3",
+      "requirement_id": "RH2",
+      "scenario": "View saved mood entries",
+      "steps": [
+        "Open the app",
+        "Use an account with saved entries",
+        "Navigate to mood history"
+      ],
+      "expected_result": "Previously saved mood entries are displayed.",
+      "notes": "Validates RH2 history access."
+    },
+    {
+      "test_id": "T_hybrid_4",
+      "requirement_id": "RH2",
+      "scenario": "Mood history is empty when there are no prior entries",
+      "steps": [
+        "Open the app",
+        "Use an account with no saved entries",
+        "Navigate to mood history"
+      ],
+      "expected_result": "No saved entries are displayed.",
+      "notes": "Empty-state case for RH2."
+    },
+    {
+      "test_id": "T_hybrid_5",
+      "requirement_id": "RH3",
+      "scenario": "Access support content during stress",
+      "steps": [
+        "Open the app",
+        "Indicate stress or anxiety",
+        "Open support features"
+      ],
+      "expected_result": "At least one support resource is displayed.",
+      "notes": "Derived from stress support persona PH2."
+    },
+    {
+      "test_id": "T_hybrid_6",
+      "requirement_id": "RH3",
+      "scenario": "Open a support resource within the app",
+      "steps": [
+        "Open the app",
+        "Indicate stress or anxiety",
+        "Open one support resource"
+      ],
+      "expected_result": "The support content opens within the app.",
+      "notes": "Second validation for RH3."
+    },
+    {
+      "test_id": "T_hybrid_7",
+      "requirement_id": "RH4",
+      "scenario": "Display reflective question after check-in",
+      "steps": [
+        "Open the app",
+        "Complete a mood check-in"
+      ],
+      "expected_result": "A reflective question is displayed.",
+      "notes": "Ensures reflective functionality tied to RH4."
+    },
+    {
+      "test_id": "T_hybrid_8",
+      "requirement_id": "RH4",
+      "scenario": "No reflective question without completed check-in",
+      "steps": [
+        "Open the app",
+        "Start but do not complete a mood check-in"
+      ],
+      "expected_result": "No reflective question is displayed.",
+      "notes": "Negative case for RH4."
+    },
+    {
+      "test_id": "T_hybrid_9",
+      "requirement_id": "RH5",
+      "scenario": "Display informational content",
+      "steps": [
+        "Open the app",
+        "Navigate to informational content"
+      ],
+      "expected_result": "Mental health information is displayed.",
+      "notes": "Validates informational content from PH3."
+    },
+    {
+      "test_id": "T_hybrid_10",
+      "requirement_id": "RH5",
+      "scenario": "Informational content is readable within the app",
+      "steps": [
+        "Open the app",
+        "Open one informational content item"
+      ],
+      "expected_result": "The informational content is readable within the app interface.",
+      "notes": "Second validation for RH5."
+    },
+    {
+      "test_id": "T_hybrid_11",
+      "requirement_id": "RH6",
+      "scenario": "Show insight-based feedback",
+      "steps": [
+        "Open the app",
+        "Use an account with sufficient data",
+        "Open insights section"
+      ],
+      "expected_result": "At least one insight or summary is displayed.",
+      "notes": "Ensures insights are generated from tracked data."
+    },
+    {
+      "test_id": "T_hybrid_12",
+      "requirement_id": "RH6",
+      "scenario": "No insight is shown when sufficient data does not exist",
+      "steps": [
+        "Open the app",
+        "Use an account with insufficient data",
+        "Open insights section"
+      ],
+      "expected_result": "No insight or summary item is displayed.",
+      "notes": "Negative case for RH6."
+    },
+    {
+      "test_id": "T_hybrid_13",
+      "requirement_id": "RH7",
+      "scenario": "Distinguish free and premium content",
+      "steps": [
+        "Open the app",
+        "Navigate to content list"
+      ],
+      "expected_result": "Free and premium content are clearly labeled.",
+      "notes": "Derived from pricing concerns in PH4."
+    },
+    {
+      "test_id": "T_hybrid_14",
+      "requirement_id": "RH7",
+      "scenario": "Compare labels between free and premium items",
+      "steps": [
+        "Open the app",
+        "Navigate to a content list with mixed access types",
+        "Compare the displayed labels"
+      ],
+      "expected_result": "Free content is distinguishable from premium content.",
+      "notes": "Second validation for RH7."
+    },
+    {
+      "test_id": "T_hybrid_15",
+      "requirement_id": "RH8",
+      "scenario": "Display subscription information",
+      "steps": [
+        "Open the app",
+        "Navigate to subscription details"
+      ],
+      "expected_result": "Subscription information is displayed before confirmation.",
+      "notes": "Ensures transparency of subscription details."
+    },
+    {
+      "test_id": "T_hybrid_16",
+      "requirement_id": "RH8",
+      "scenario": "Premium access information is available within the app",
+      "steps": [
+        "Open the app",
+        "Open premium or subscription information"
+      ],
+      "expected_result": "Premium access information is displayed within the app.",
+      "notes": "Second validation for RH8."
+    },
+    {
+      "test_id": "T_hybrid_17",
+      "requirement_id": "RH9",
+      "scenario": "Show privacy notice before sensitive actions",
+      "steps": [
+        "Open the app",
+        "Access a feature using sensitive data"
+      ],
+      "expected_result": "Privacy information is shown before proceeding.",
+      "notes": "Ensures privacy transparency from PH5."
+    },
+    {
+      "test_id": "T_hybrid_18",
+      "requirement_id": "RH9",
+      "scenario": "Sensitive feature is preceded by privacy review information",
+      "steps": [
+        "Open the app",
+        "Open a feature using sensitive data",
+        "Observe the initial screen"
+      ],
+      "expected_result": "Privacy-related information is presented before further action.",
+      "notes": "Second validation for RH9."
+    },
+    {
+      "test_id": "T_hybrid_19",
+      "requirement_id": "RH10",
+      "scenario": "Display data handling information",
+      "steps": [
+        "Open the app",
+        "Open privacy policy section"
+      ],
+      "expected_result": "Data handling information is displayed clearly.",
+      "notes": "Validates requirement RH10 for data transparency."
+    },
+    {
+      "test_id": "T_hybrid_20",
+      "requirement_id": "RH10",
+      "scenario": "Data policy information is readable within the app",
+      "steps": [
+        "Open the app",
+        "Navigate to the privacy or data policy section",
+        "Read the displayed information"
+      ],
+      "expected_result": "The data handling information is readable within the app.",
+      "notes": "Second validation for RH10."
     }
   ]
 }
