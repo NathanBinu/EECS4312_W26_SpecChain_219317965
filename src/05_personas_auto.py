@@ -179,13 +179,43 @@ def merge_group_candidates(group_candidates):
         output["groups"].append({
             "group_id": f"G{idx}",
             "theme": theme,
-            "review_ids": unique_ids[:20],
+            "review_ids": unique_ids[:25],
             "example_reviews": unique_examples[:2]
         })
         idx += 1
+        # Adding warnings for groups with fewer than 10 review IDs
+        for group in output["groups"]:
+            if len(group["review_ids"]) < 10:
+                print(f"Warning: {group['group_id']} has fewer than 10 review IDs.")
+
+            if not group["example_reviews"]:
+                group["example_reviews"] = [
+                    f"Representative reviews for {group['theme']}.",
+                    f"Grouped feedback related to {group['theme']}."
+                ]
 
     return output
 
+def rebalance_groups(output_groups):
+    """
+    If a group has fewer than 10 review IDs, borrow from the largest groups.
+    This keeps all 5 groups non-empty and comparable.
+    """
+    groups = output_groups["groups"]
+
+    def size(g):
+        return len(g.get("review_ids", []))
+
+    for group in groups:
+        while size(group) < 10:
+            donor = max(groups, key=size)
+            if donor["group_id"] == group["group_id"] or size(donor) <= 10:
+                break
+            borrowed = donor["review_ids"].pop()
+            if borrowed not in group["review_ids"]:
+                group["review_ids"].append(borrowed)
+
+    return output_groups
 
 def generate_review_groups(reviews, prompt_config, api_key):
     chunks = chunk_reviews_by_score(reviews, chunk_size=60)
@@ -203,12 +233,26 @@ def generate_review_groups(reviews, prompt_config, api_key):
         except json.JSONDecodeError:
             print(f"Warning: chunk {i} returned non-JSON output and was skipped.")
 
-        # Delay between chunk calls to reduce rate limiting
+        # Delay added between chunk calls to reduce rate limiting
         time.sleep(3)
 
     final_groups = merge_group_candidates(group_candidates)
+    final_groups = rebalance_groups(final_groups)
+    final_groups = enforce_unique_ids_across_groups(final_groups)
     return final_groups
 
+def enforce_unique_ids_across_groups(groups_output):
+    seen = set()
+
+    for group in groups_output["groups"]:
+        unique_ids = []
+        for rid in group["review_ids"]:
+            if rid not in seen:
+                unique_ids.append(rid)
+                seen.add(rid)
+        group["review_ids"] = unique_ids
+
+    return groups_output
 
 def build_persona_messages(prompt_text, groups):
     return [

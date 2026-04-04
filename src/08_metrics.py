@@ -101,38 +101,63 @@ def count_unique_review_ids(groups):
 
 def parse_spec_requirements(spec_text):
     """
-    Parses specs in this format:
+    Parses specs in either of these formats:
 
+    Bracketed:
     # Requirement ID: RM1
     - Description: [ ... ]
     - Source Persona: [PM-01]
     - Traceability: [Derived from review group G1]
     - Acceptance Criteria: [Given ... When ... Then ...]
 
-    Works for RM/RA/RH style IDs.
+    Non-bracketed:
+    # Requirement ID: RA1
+    - Description: The system shall ...
+    - Source Persona: PA1
+    - Traceability: Derived from review group G1
+    - Acceptance Criteria: Given ... When ... Then ...
     """
-    pattern = re.compile(
-        r"# Requirement ID:\s*(?P<req_id>[A-Z]{2}\d+)\s*"
-        r".*?- Description:\s*\[(?P<description>.*?)\]\s*"
-        r".*?- Source Persona:\s*\[(?P<persona>.*?)\]\s*"
-        r".*?- Traceability:\s*\[(?P<traceability>.*?)\]\s*"
-        r".*?- Acceptance Criteria:\s*\[(?P<acceptance>.*?)\]",
+    block_pattern = re.compile(
+        r"# Requirement ID:\s*(?P<req_id>[A-Z]{2}\d+)\s*(?P<body>.*?)(?=(?:# Requirement ID:)|\Z)",
         re.DOTALL,
     )
 
     requirements = []
-    for match in pattern.finditer(spec_text):
+
+    for match in block_pattern.finditer(spec_text):
+        req_id = match.group("req_id").strip()
+        body = match.group("body")
+
+        def extract_field(field_name):
+            # first try bracketed form
+            m = re.search(
+                rf"- {re.escape(field_name)}:\s*\[(.*?)\]",
+                body,
+                re.DOTALL
+            )
+            if m:
+                return m.group(1).strip()
+
+            m = re.search(
+                rf"- {re.escape(field_name)}:\s*(.+)",
+                body
+            )
+            if m:
+                return m.group(1).strip()
+
+            return ""
+
         requirements.append(
             {
-                "requirement_id": match.group("req_id").strip(),
-                "description": match.group("description").strip(),
-                "source_persona": match.group("persona").strip(),
-                "traceability": match.group("traceability").strip(),
-                "acceptance_criteria": match.group("acceptance").strip(),
+                "requirement_id": req_id,
+                "description": extract_field("Description"),
+                "source_persona": extract_field("Source Persona"),
+                "traceability": extract_field("Traceability"),
+                "acceptance_criteria": extract_field("Acceptance Criteria"),
             }
         )
-    return requirements
 
+    return requirements
 
 def count_traceability_links(groups, personas, requirements, tests):
     """
